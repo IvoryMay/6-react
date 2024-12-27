@@ -1,18 +1,22 @@
 import React, { useState } from 'react'
+import useCounterStore from './store/useCounterStore';
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
-
+  // const [count, setCount] = useState(0);
+const{count,resetCount,increaseCount,decreaseCount} = useCounterStore();
  const handleIncrement = ()=>{
-  setCount(count + 1);
+  // setCount(count + 1);
+  increaseCount(1);
  }
 
  const handleDecrement = ()=>{
-  setCount(count - 1);
+  // setCount(count - 1);
+  decreaseCount(1)
  }
 
  const handleReset = ()=>{
-  setCount(0);
+  // setCount(0);
+  resetCount();
  }
   return (
     <div>
