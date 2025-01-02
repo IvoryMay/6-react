@@ -11,12 +11,12 @@ const ProductDetail = () => {
 
   const {products} = useProductStore();
 
-  const {productId} = useParams();
+  const {productSlug} = useParams();
 
   const {carts,addCart} = useCartStore();
 
   
-  const currentProduct = products.find((product) => product.id == productId);
+  const currentProduct = products.find((product) => product.slug == productSlug);
   console.log(currentProduct);
 
   const handleAddCartBtn = (event) =>{

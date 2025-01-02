@@ -10,7 +10,9 @@ const ProductCard =
   title,
    price,
    image,
-  rating: {rate}}}) => {
+  rating: {rate},
+  slug,
+}}) => {
 
     const {carts,addCart} = useCartStore();
     const navigate = useNavigate();
@@ -30,7 +32,7 @@ const ProductCard =
     }
 
     const handleOpenDetail = () => {
-      navigate(`/product-detail/${id}`);
+      navigate(`/product-detail/${slug}`);
     }
   return (
     <div onClick={handleOpenDetail} className='border border-gray-500 p-5 flex flex-col items-start gap-5'>
