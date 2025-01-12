@@ -1,9 +1,49 @@
 import './style.css'
 
-
+// async await
 const fetchBtn = document.querySelector('#fetchBtn');
-const handleFetchBtn = () => {
+const handleFetchBtn = async () => {
   console.log("u clicked me")
+  const res1 = await fetch("http://localhost:5000/tasks/1");
+  const data1 = await res1.json();
+  console.log(data1);
+
+  const res2 = await fetch('http://localhost:5000/tasks/2');
+  const data2 = await res2.json();
+  console.log(data2);
+
+  const res3 = await fetch('http://localhost:5000/tasks/3');
+  const data3 = await res3.json();
+  console.log(data3);
+
+  const res4 = await fetch('http://localhost:5000/tasks/4');
+  const data4 = await res4.json();
+  console.log(data4);
+
+
+  
+
+
+//   new Promise(function(resolve,reject){
+//      setTimeout(()=>{
+//       const val =Math.floor( Math.random() * 10);
+//       console.log(val);
+//        if(val>5){
+//         resolve(val);
+//        }else{
+//         reject(val);
+//        }
+
+//      },1000);
+//   }).then(function(x){
+// console.log("success",x);
+//   },
+//   function(y){
+//     console.log("fail",y);
+//   }
+//   )
+
+
   // fetch('http://localhost:5000/tasks').then(res => res.text()).then(data => {console.log( typeof data);
   //   console.log(JSON.parse(data));
   // });
@@ -18,9 +58,9 @@ const handleFetchBtn = () => {
 
   // fetch("https://api.fastforex.io/fetch-all?api_key=0f6cfe29c3-20dd590f77-splsr7").then(res => res.json()).then(rates => console.log(rates));
 
-  fetch('https://fakestoreapi.com/products/1')
-            .then(res=>res.json())
-            .then(product=>console.log(product));
+  // fetch('https://fakestoreapi.com/products/1')
+  //           .then(res=>res.json())
+  //           .then(product=>console.log(product));
 }
 
 fetchBtn.addEventListener('click', handleFetchBtn);
