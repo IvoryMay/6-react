@@ -22,7 +22,7 @@ const App = () => {
     });
     const data = await res.json();
     console.log(data);
-    setTasks([...tasks, data]);
+    fetchTask();
     setSending(false);
   };
 
@@ -44,8 +44,7 @@ const App = () => {
     });
     const data = await res.json();
     console.log(data);
-    setTasks(tasks.map((el) => (el.id === id ? data : el)));
-  
+    fetchTask();  
     
   };
 

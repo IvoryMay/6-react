@@ -3,7 +3,7 @@
     {
       "id": 1,
       "task": "Finish project report",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": 2,
@@ -13,11 +13,11 @@
     {
       "id": 3,
       "task": "Schedule dentist appointment",
-      "isDone": false
+      "isDone": true
     },
     {
       "task": "Morning",
-      "isDone": false,
+      "isDone": true,
       "id": 4
     }
   ]
