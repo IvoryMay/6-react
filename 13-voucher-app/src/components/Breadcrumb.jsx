@@ -15,6 +15,13 @@ const Breadcrumb = ({currentPageTitle,links}) => {
         Home
       </Link>
     </li>
+
+  {links && links.map((link,index)=><li className="inline-flex items-center" key={index}>
+      <div className="flex items-center">
+        <HiChevronRight className='size-5' />
+        <Link to={link.url} className="ml-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ml-2 dark:text-gray-400 dark:hover:text-white">{link.name}</Link>
+      </div>
+    </li>)}
     
     <li aria-current="page">
       <div className="flex items-center gap-3">

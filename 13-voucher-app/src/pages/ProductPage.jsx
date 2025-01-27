@@ -12,7 +12,7 @@ const ProductPage = () => {
         
         <SearchBox search={"Search product here..."}
          addNew={"Add New Product"}
-         url={'/product'} />
+         url={"/product/create"} />
         <ProductList />
       </Container>
     </section>
