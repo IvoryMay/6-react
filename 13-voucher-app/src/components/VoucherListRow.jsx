@@ -4,6 +4,8 @@ import ShowDate from './ShowDate'
 import { useSWRConfig } from 'swr';
 import toast from 'react-hot-toast';
 import { bouncy } from "ldrs";
+import { Link } from 'react-router-dom';
+import { HiOutlineArrowLongRight } from 'react-icons/hi2';
 
 bouncy.register();
 
@@ -46,13 +48,18 @@ const VoucherListRow = ({voucher:{id,voucher_id,customer_name,customer_email,sal
 
 <button type="button"
 onClick={handleDeleteBtn}
-className="size-10 flex items-center justify-center text-sm font-medium text-red-600 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white rounded-lg">
+className="size-10 flex items-center justify-center text-sm font-medium text-red-600 bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white rounded-l-lg">
   {isDeleting ? (
                 <l-bouncy size="20" speed="1.75" color="red"></l-bouncy>
               ) : (
                 <HiOutlineTrash />
               )}
 </button>
+<Link to={`/voucher/detail/${id}`} type="button"
+
+className="size-10 flex items-center justify-center text-sm font-medium  bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white rounded-e-lg">
+ <HiOutlineArrowLongRight/> 
+</Link>
 
 </div>
 

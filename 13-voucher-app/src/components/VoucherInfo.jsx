@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import SaleForm from './SaleForm';
 import VoucherTable from './VoucherTable';
 import useRecordStore from '../stores/useRecordStore';
+import { useNavigate } from 'react-router-dom';
 dotSpinner.register()
 
 const VoucherInfo = () => {
@@ -13,6 +14,8 @@ const VoucherInfo = () => {
   const [isSending, setIsSending ] = useState(false);
 const {records,resetRecords} = useRecordStore();
 
+const navigate = useNavigate();
+
   const onSubmit = async (data) =>
      {
       setIsSending(true);
@@ -20,19 +23,22 @@ const {records,resetRecords} = useRecordStore();
   const Tax = total * 0.7;
   const NetTotal = total + Tax;
   const currentVoucher = {...data, records,total, Tax, NetTotal };
-   await fetch(import.meta.env.VITE_API_URL+"/vouchers", {
+ const res =  await fetch(import.meta.env.VITE_API_URL+"/vouchers", {
      method: "POST",
      headers: {
        "Content-Type": "application/json",
      },
      body: JSON.stringify(currentVoucher),
    });
+    const json = await res.json();
    
    toast.success("Voucher is created successfully");
    reset();
    resetRecords();
    setIsSending(false);
-     }
+   if(data.redirect_to_detail){
+     navigate(`/voucher/detail/${json.id}`)}
+     };
 
 
   function generateInvoiceNumber() {
@@ -178,8 +184,31 @@ const {records,resetRecords} = useRecordStore();
     </form>
     <SaleForm/>
     <VoucherTable/>
-    <div className='flex justify-end items-center gap-3'>
-    <div className="flex items-center ">
+    <div className='flex flex-col justify-end items-end mt-3 gap-2'>
+    <div className="flex  items-center gap-3">
+    <label
+            htmlFor="redirect_to_detail"
+            className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >
+           Redirect to voucher detail.
+          </label>
+          <input
+            {...register("redirect_to_detail")}
+            id="redirect_to_detail"
+            type="checkbox"
+            form='infoForm'
+            required
+            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+          />
+          
+        </div>
+    <div className="flex  items-center gap-3">
+    <label
+            htmlFor="all-correct"
+            className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >
+            Make sure all fields are correct.
+          </label>
           <input
             {...register("all-correct")}
             id="all-correct"
@@ -188,12 +217,7 @@ const {records,resetRecords} = useRecordStore();
             required
             className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
           />
-          <label
-            htmlFor="all-correct"
-            className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-          >
-            Make sure all fields are correct.
-          </label>
+          
         </div>
         <button
           form='infoForm'

@@ -61,5 +61,164 @@
       "created_at": "2023-10-12T19:00:00Z"
     }
   ],
-  "vouchers": []
+  "vouchers": [
+    {
+      "voucher_id": "INV-20250204-3871",
+      "customer_name": "kyaw",
+      "customer_email": "kyaw@gmail.com",
+      "sale_date": "2025-02-04",
+      "all-correct": true,
+      "records": [
+        {
+          "id": 1738647082065,
+          "product": {
+            "id": 3,
+            "product_name": "SEO Optimization Service",
+            "price": 499.99,
+            "created_at": "2023-03-10T11:30:00Z"
+          },
+          "quantity": "4",
+          "cost": 1999.96,
+          "created_at": "2025-02-04T05:31:22.065Z"
+        }
+      ],
+      "total": 1999.96,
+      "Tax": 1399.972,
+      "NetTotal": 3399.932,
+      "id": 1
+    },
+    {
+      "voucher_id": "INV-20250204-2771",
+      "customer_name": "Zaw Zaw",
+      "customer_email": "zaw@gmail.com",
+      "sale_date": "2025-02-04",
+      "all-correct": true,
+      "records": [
+        {
+          "id": 1738647100344,
+          "product": {
+            "id": 6,
+            "product_name": "Website Maintenance Package",
+            "price": 250,
+            "created_at": "2023-06-18T08:15:00Z"
+          },
+          "quantity": "5",
+          "cost": 1250,
+          "created_at": "2025-02-04T05:31:40.344Z"
+        }
+      ],
+      "total": 1250,
+      "Tax": 875,
+      "NetTotal": 2125,
+      "id": 2
+    },
+    {
+      "voucher_id": "INV-20250205-8744",
+      "customer_name": "Maw",
+      "customer_email": "maw@gmail.com",
+      "sale_date": "2025-02-05",
+      "redirect-to-detail": true,
+      "all-correct": true,
+      "records": [
+        {
+          "id": 1738742584337,
+          "product": {
+            "id": 1,
+            "product_name": "Custom Website Design",
+            "price": 899.99,
+            "created_at": "2023-01-01T12:30:00Z"
+          },
+          "quantity": "1",
+          "cost": 899.99,
+          "created_at": "2025-02-05T08:03:04.337Z"
+        }
+      ],
+      "total": 899.99,
+      "Tax": 629.9929999999999,
+      "NetTotal": 1529.983,
+      "id": 3
+    },
+    {
+      "voucher_id": "INV-20250205-5276",
+      "customer_name": "Zaw Zaw",
+      "customer_email": "zaw@gmail.com",
+      "sale_date": "2025-02-05",
+      "redirect-to-detail": true,
+      "all-correct": true,
+      "records": [
+        {
+          "id": 1738742694445,
+          "product": {
+            "id": 5,
+            "product_name": "WordPress Website Development",
+            "price": 799,
+            "created_at": "2023-05-20T10:00:00Z"
+          },
+          "quantity": "2",
+          "cost": 1598,
+          "created_at": "2025-02-05T08:04:54.445Z"
+        }
+      ],
+      "total": 1598,
+      "Tax": 1118.6,
+      "NetTotal": 2716.6,
+      "id": 4
+    },
+    {
+      "voucher_id": "INV-20250205-3111",
+      "customer_name": "kyaw",
+      "customer_email": "kyaw@gmail.com",
+      "sale_date": "2025-02-05",
+      "redirect-to-detail": true,
+      "all-correct": true,
+      "records": [
+        {
+          "id": 1738742780958,
+          "product": {
+            "id": 7,
+            "product_name": "Landing Page Design",
+            "price": 399.99,
+            "created_at": "2023-07-22T12:30:00Z"
+          },
+          "quantity": "2",
+          "cost": 799.98,
+          "created_at": "2025-02-05T08:06:20.958Z"
+        }
+      ],
+      "total": 799.98,
+      "Tax": 559.986,
+      "NetTotal": 1359.966,
+      "id": 5
+    },
+    {
+      "voucher_id": "INV-20250205-1960",
+      "customer_name": "kyaw",
+      "customer_email": "kyaw@gmail.com",
+      "sale_date": "2025-02-05",
+      "redirect-to-detail": false,
+      "all-correct": true,
+      "redirect": false,
+      "redirect_": false,
+      "redirect_to": false,
+      "redirect_to_detail": true,
+      "records": [
+        {
+          "id": 1738743010325,
+          "product": {
+            "id": 8,
+            "product_name": "Custom Web Application Development",
+            "price": 2500,
+            "created_at": "2023-08-10T15:00:00Z"
+          },
+          "quantity": "2",
+          "cost": 5000,
+          "created_at": "2025-02-05T08:10:10.325Z"
+        }
+      ],
+      "total": 5000,
+      "Tax": 3500,
+      "NetTotal": 8500,
+      "id": 6
+    }
+  ]
 }
