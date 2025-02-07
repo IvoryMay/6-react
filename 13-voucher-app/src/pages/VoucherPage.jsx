@@ -9,7 +9,6 @@ const VoucherPage = () => {
     <section>
         <Container>
         <Breadcrumb currentPageTitle={"Voucher Module"}/>
-        <SearchBox search={"Search Voucher"} addNew={"Create Sale"} url={"/sale"} /> 
         <VoucherList />
         </Container>
 

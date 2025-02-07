@@ -11,12 +11,7 @@ const SalePage = () => {
     <section>
         <Container>
         <Breadcrumb currentPageTitle={"Sale Module"}/>
-        {/* <SearchBox search={"Search Sale"}
-         addNew={"Add New Sale"}
-         url={'/sale'}
-        /> */}
-        <VoucherInfo/>
-        
+        <VoucherInfo/>  
         </Container>
 
     </section>

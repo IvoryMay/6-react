@@ -9,10 +9,6 @@ const ProductPage = () => {
     <section>
       <Container>
         <Breadcrumb currentPageTitle={"Product Module"}/>
-        
-        <SearchBox search={"Search product here..."}
-         addNew={"Add New Product"}
-         url={"/product/create"} />
         <ProductList />
       </Container>
     </section>

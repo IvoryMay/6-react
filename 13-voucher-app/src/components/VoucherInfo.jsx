@@ -59,9 +59,14 @@ const navigate = useNavigate();
 
 
   return (
-    <div>
-      <form onSubmit={handleSubmit(onSubmit)} id='infoForm'>
-      <div className='grid grid-cols-1 md:grid-cols-4 gap-5 mb-5'>
+    <div className='grid grid-cols-4 gap-5'>
+      <div className='col-span-3'>
+        <SaleForm/>
+      <VoucherTable/>
+      </div>
+      <div className='col-span-1 flex flex-col h-full'>
+        <form onSubmit={handleSubmit(onSubmit)} id='infoForm'>
+      <div className='grid grid-cols-1  gap-3 mb-5'>
         <div className='col-span-1'>
         <label
             
@@ -182,9 +187,7 @@ const navigate = useNavigate();
       </div>
       
     </form>
-    <SaleForm/>
-    <VoucherTable/>
-    <div className='flex flex-col justify-end items-end mt-3 gap-2'>
+    <div className='flex flex-col justify-end items-end mt-auto gap-2'>
     <div className="flex  items-center gap-3">
     <label
             htmlFor="redirect_to_detail"
@@ -222,7 +225,7 @@ const navigate = useNavigate();
         <button
           form='infoForm'
           type="submit"
-          className="text-white mt-4 inline-flex justify-center bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm py-2.5 px-5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="text-white mt-4 inline-flex justify-center bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm py-5 px-10 text-center me-2  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           <span>Confirm Voucher</span>
           {isSending && (
@@ -234,6 +237,10 @@ const navigate = useNavigate();
           )}
         </button>
     </div>
+    </div>
+      
+    
+   
     
     </div>
   )

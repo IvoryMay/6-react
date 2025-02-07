@@ -8,8 +8,8 @@ const VoucherTable = () => {
   const Tax = total * 0.7;
   const NetTotal = total + Tax;
   return (
-    <div className='shadow-md sm:rounded-lg overflow-hidden'>
-      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mb-5 ">
+    <div className='shadow-md sm:rounded-lg overflow-hidden '>
+      <table className="w-full  text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mb-5 ">
     <thead className="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400 rounded-lg">
       <tr className=" ">
         <th scope="col" className="px-6 py-4">
